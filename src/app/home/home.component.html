@@ -3,12 +3,12 @@
     <h1 class="text-center">¡Bienvenido a la formación de Angular!</h1>
     <p class="text-center">Aqui tenemos los distintos apartados que iremos creando:</p>
     <div class="grid-container">
-      <button class="grid-item red-item" (click)="goTo('/signals')">Signals</button>
-      <button class="grid-item blue-item" (click)="goTo('/reactividad')">RxJS</button>
-      <button class="grid-item green-item" (click)="goTo('/libreria')">Libreria de minsait</button>
-      <button class="grid-item yellow-item" (click)="goTo('/grids')">Grids</button>
-      <button class="grid-item orange-item" (click)="goTo('/forms')">Formularios</button>
-      <button class="grid-item purple-item" (click)="goTo('/types')">Tipados</button>
+      <button class="grid-item red-item" routerLink="/signals">Signals</button>
+      <button class="grid-item blue-item" disabled>RxJS</button>
+      <button class="grid-item green-item" routerLink="/libreria">Libreria de minsait</button>
+      <button class="grid-item yellow-item" routerLink="/grids">Grids</button>
+      <button class="grid-item orange-item" disabled>Formularios</button>
+      <button class="grid-item purple-item" disabled>Tipados</button>
     </div>
 </div>
   

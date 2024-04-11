@@ -18,6 +18,7 @@
   transition: all 0.3s ease-in-out; /* Transición suave para el efecto */
 }
 
+
 .grid-item:hover {
   color: white;
 }

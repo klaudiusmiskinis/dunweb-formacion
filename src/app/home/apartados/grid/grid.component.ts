@@ -1,6 +1,6 @@
 import { Component, inject, signal } from '@angular/core';
-import { NavbarComponent } from '../shared/navbar/navbar.component';
-import { ApiService } from '../services/api.service';
+import { NavbarComponent } from '../../../shared/navbar/navbar.component';
+import { ApiService } from '../../../services/api.service';
 import {
   AsyncPipe,
   JsonPipe,
@@ -10,7 +10,7 @@ import {
   NgSwitchCase,
   NgSwitchDefault,
 } from '@angular/common';
-import { MinsaitModule } from '../minsait.module';
+import { MinsaitModule } from '../../../shared/modules/minsait.module';
 
 @Component({
   selector: 'app-grid',

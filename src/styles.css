@@ -79,4 +79,14 @@ hr {
   color: azure;
 }
 
+button[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+button[disabled]:hover {
+  background-color: inherit; 
+  color: inherit;
+}
+
 @import './grids.css'

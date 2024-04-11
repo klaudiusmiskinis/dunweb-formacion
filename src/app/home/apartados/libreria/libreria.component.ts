@@ -1,6 +1,6 @@
 import { Component, inject, signal } from '@angular/core';
-import { RedirectService } from '../services/redirect.service';
-import { NavbarComponent } from '../shared/navbar/navbar.component';
+import { RedirectService } from '../../../services/redirect.service';
+import { NavbarComponent } from '../../../shared/navbar/navbar.component';
 
 @Component({
   selector: 'app-libreria',

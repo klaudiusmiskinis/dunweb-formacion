@@ -1,5 +1,5 @@
 import { Component, WritableSignal, computed, signal } from '@angular/core';
-import { MinsaitModule } from 'src/app/minsait.module';
+import { MinsaitModule } from 'src/app/shared/modules/minsait.module';
 
 @Component({
   selector: 'solucion-signals',
