@@ -1,0 +1,158 @@
+mn-table {
+  height: 100%;
+  overflow: auto;
+  line-height: 1.42857143;
+}
+
+mn-table * {
+  box-shadow: none !important;
+}
+
+mn-table table {
+  z-index: 0;
+}
+
+mn-table thead {
+  border: none;
+}
+
+mn-table tbody {
+  position: relative;
+  z-index: -1;
+}
+
+mn-table form {
+  padding: 2px 8px;
+}
+
+mn-table input[formControlName][msInput] {
+  background-color: rgb(237, 247, 255);
+  border: 1px solid rgb(212, 212, 212);
+  height: 18px;
+  width: 100%;
+  font-weight: bold;
+}
+
+mn-table em[class].clearCross {
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 11px;
+}
+
+mn-table input:focus {
+  outline: none;
+}
+
+mn-table tr th.head-checkbox input[type='checkbox'] {
+  display: block ruby;
+}
+
+mn-table tr td.checkboxGrid input[type='checkbox'] {
+  display: inline-table;
+}
+
+mn-table input[type='checkbox'] {
+  -moz-appearance: initial;
+  width: inherit;
+  height: inherit;
+  position: relative;
+  cursor: pointer;
+}
+
+mn-table .paginator > div:first-of-type > input[type='text'] {
+  width: 32px;
+}
+
+mn-table .paginator > div:first-of-type {
+  padding-right: 2em !important;
+}
+
+mn-table input[type='checkbox']::before {
+  content: '\f00c';
+  text-align: center;
+  font-family: FontAwesome;
+  color: rgba(51, 51, 51, 0.1);
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgb(243, 243, 243);
+}
+
+mn-table td.checkboxGrid:hover {
+  cursor: pointer;
+}
+
+mn-table td.checkboxGrid input[type='checkbox']:checked::before {
+  background-color: rgb(199, 229, 239);
+}
+
+mn-table input[type='checkbox']:checked::before {
+  color: rgba(51, 51, 51, 1);
+}
+
+mn-table td.checkboxGrid:has(input[type='checkbox']:checked) {
+  background-color: rgb(199, 229, 239);
+}
+
+/* ToDo Mantener siempre visible los checkbox */
+/* mn-table :where(th.head-checkbox, td.checkboxGrid) {
+  position: absolute;
+} */
+
+.row-invalid {
+  color: red;
+}
+
+.row-invalid > div.cell.row-selected {
+  color: red;
+}
+
+mn-table tr :is(td.checkboxGrid, th.head-checkbox) {
+  background-color: rgb(243, 243, 243);
+  display: table-cell;
+  padding: 0;
+  width: 24px;
+  min-width: 24px;
+  text-align: center;
+}
+
+mn-table .paginator {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+mn-table .paginator .paginator-row-count-picker {
+  border: 1px solid #ccc;
+}
+
+mn-table .paginator .paginator-row-count-picker select[class] {
+  width: 45px;
+  outline: none;
+}
+
+mn-table .paginator > .data-count {
+  display: inline-block;
+  margin-left: auto;
+  padding: 0;
+  width: auto;
+}
+
+mn-table .paginator > .data-count > div:first-child {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+mn-table .paginator > .data-count > div:last-child {
+  display: inline-block;
+  max-height: 19px;
+  vertical-align: middle;
+  margin: 0 10px 0 0;
+}

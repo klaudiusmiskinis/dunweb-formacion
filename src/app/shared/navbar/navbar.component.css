@@ -1,0 +1,29 @@
+.navbar {
+  display: flex;
+  color: black;
+}
+
+.nav-item {
+  text-align: center;
+  font-weight: bold;
+}
+
+.nav-return {
+  width: 80px;
+  transition: all 0.3s ease-in-out;
+  background-color: #7b7b7b;
+  cursor: pointer;
+}
+
+.nav-return:hover {
+  background-color: #d4d4d4;
+  box-shadow: 0 0 5px #f2f2f2;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-title-section {
+  width: 90%;
+  text-align: end;
+  margin-right: 10px;
+  color: white;
+}

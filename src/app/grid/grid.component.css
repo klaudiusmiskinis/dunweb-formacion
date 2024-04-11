@@ -1,0 +1,41 @@
+.bg-white {
+  background-color: white;
+}
+
+.text-dark {
+  color: rgb(17, 17, 17);
+}
+
+.estado-activo {
+  color: green; /* Color para estado activo */
+  font-weight: bold;
+}
+
+.estado-inactivo {
+  color: red; /* Color para estado inactivo */
+  font-weight: bold;
+}
+
+.hglg {
+  background-color: #111111;
+  padding: 3px;
+  color: #006aff;
+  transition: all 0.3s ease-in-out;
+}
+
+.hglg-out {
+  background-color: #111111;
+  padding: 3px;
+  color: #ffffff;
+  margin: 0;
+}
+
+.hglg:hover {
+  background-color: #006aff;
+  box-shadow: 0 0 5px #006aff;
+  color: #111111;
+}
+
+li {
+  margin-bottom: 8px;
+}

@@ -1,0 +1,9 @@
+<minsait-panel [isOpen]="false" [hasCaret]="true" [title]="'Solución'">
+    <div class="w-100 text-center small">
+        <span>Código disponible en el HTML y TS de solucion-uno</span>
+        <p>Contador actual: {{ contador() }}</p>
+        <p>Contador doble: {{ dobleValor() }}</p>
+        <minsait-button (click)="sumar()">Sumar</minsait-button>
+        <minsait-button (click)="restar()">Restar</minsait-button>
+    </div>
+</minsait-panel>
