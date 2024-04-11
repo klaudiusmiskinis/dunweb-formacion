@@ -1,65 +1,110 @@
-<app-navbar 
-    [title]="'Signals'" >
-</app-navbar>
+<app-navbar [title]="'Signals'"> </app-navbar>
 
 <div class="container">
-    <!-- Apartado 1 -->
+  <!-- Apartado 1 -->
+  <div fadeInOutAnimation>
     <h2 class="w-100">Signals, ¿que son?</h2>
-    <p class="w-100">Un <b>signal</b> es como una caja que guarda un valor y avisa a quienes estén interesados cada vez que este valor cambia.</p>
+    <p class="w-100">
+      Un <b>signal</b> es como una caja que guarda un valor y avisa a quienes
+      estén interesados cada vez que este valor cambia.
+    </p>
     <p class="w-100 bold">Se declaran asi:</p>
-    <pre class="w-100 typescript">contador = signal(0);</pre>
+    <pre><code class="language-typescript">contador = signal(0);</code></pre>
     <p class="w-100">De manera más completa:</p>
-    <pre class="w-100 typescript ">contador: WrittableSignal&lt;number&gt; = signal&lt;number&gt;(0)</pre>
+    <pre><code class="language-typescript">contador: WrittableSignal&lt;number&gt; = signal&lt;number&gt;(0)</code></pre>
     <p class="w-100">Para objetos:</p>
-    <pre class="w-100 typescript mb-3"> persona = signal(&#123;nombre: 'Paco', edad: 27&#125;); </pre>
+    <pre><code class="language-typescript">persona = signal(&#123;nombre: 'Paco', edad: 27&#125;); </code></pre>
+  </div>
 
-    <!-- Apartado 2 -->
-    <h3 class="w-100">¿Conseguir el valor de los signals?</h3>
-    <p class="w-100">El valor de una signal se lee llamando a su <b>función</b> getter, que permite a Angular rastrear dónde se utiliza la signal.</p>
-    <pre class="w-100 typescript">this.contador(); // 0</pre>
-    <p class="w-100">Es común que uno se deje los parentesis, lo cual nos dara fallos:</p>
-    <pre class="w-100 typescript mb-3">this.contador; // {{ 'function ()' }}</pre>
+  <!-- Apartado 2 -->
+  <div fadeInOutAnimation>
+    <h3 class="w-100 mt-5">¿Conseguir el valor de los signals?</h3>
+    <p  class="w-100">
+      El valor de una signal se lee llamando a su <b>función</b> getter, que
+      permite a Angular rastrear dónde se utiliza la signal.
+    </p>
+    <pre><code class="language-typescript">this.contador(); // output: 0</code></pre>
+    <p class="w-100">
+      Es común que uno se deje los parentesis, lo cual nos dara fallos:
+    </p>
+    <pre><code class="language-typescript">this.contador; // {{ "function ()" }}</code></pre>
+  </div>
 
-    <!-- Apartado 3 -->
-    <h3 class="w-100">¿Como actualizar el valor de lo signals?</h3>
-    <p class="w-100">Las signals pueden ser de escritura (WrittableSignal) o de sólo lectura (Signal).</p>
+  <!-- Apartado 3 -->
+  <div fadeInOutAnimation>
+    <h3 class="w-100 mt-5">¿Como actualizar el valor de lo signals?</h3>
+    <p class="w-100">
+      Las signals pueden ser de escritura (WrittableSignal) o de sólo lectura
+      (Signal).
+    </p>
     <p class="w-100">Para cambiar el valor:</p>
-    <pre class="w-100 typescript">this.contador.set(3);</pre>
+    <pre><code class="language-typescript">this.contador.set(3);</code></pre>
     <p class="w-100">O también:</p>
-    <pre class="w-100 typescript">this.contador.update(valor => valor + 1);</pre>
+    <pre><code class="language-typescript">this.contador.update(valor => valor + 1);</code></pre>
     <p class="w-100">Y para los atributos de un objeto:</p>
-    <pre class="w-100 typescript mb-3"> this.persona().edad = 28;</pre>
+    <pre><code class="language-typescript">this.persona().edad = 28;</code></pre>
+  </div>
+  <!-- Apartado 4 -->
 
-    <!-- Apartado 4 -->
-    <h3 class="w-100">Computeds</h3>
-    <p class="w-100">Las computed son signals de solo lectura que derivan su valor de otras signals. No cambian el valor del signal al que hacen referencia.</p>
+  <div fadeInOutAnimation>
+    <h3 class="w-100 mt-5">Computeds</h3>
+    <p class="w-100">
+        Las computed son signals de solo lectura que derivan su valor de otras
+        signals. No cambian el valor del signal al que hacen referencia.
+    </p>
     <p class="w-100 bold">Se declaran asi:</p>
-    <pre class="w-100 typescript">contadorDoble = computed(() => this.contador() * 2);</pre>
-    <p class="w-100 mb-3">Cuando el signal al que hace referencia el computed tiene un cambio, el computed ya sabe ese cambio. No tenemos que preocuparnose de actualizar funcionamiento, rellamar metodos o otras logicas.</p>
-    
-     <!-- Ejercicio 1 -->
-     <h3 class="w-100">Ejercicio</h3>
-     <p class="w-100">Acceder al archivo de <b>signals.component.ts</b> y crear un contador que sume, reste y muestre el valor duplicado usando signals y computeds</p>
-     <div class="ejercicio">
-        <p>Sustituye este apartado con los outputs de lo que hagas en el ejercicio.</p>
-        <p>['nombre variable: ' + this.vuestravariable]</p>
-        <p>['variable duplicada: ' + this.vuestravariable]</p>
-        <p>[botones de incremento, resta]</p>
-     </div>
-     <solucion-signals></solucion-signals>
+    <pre><code class="language-typescript">contadorDoble = computed(() => this.contador() * 2);</code></pre>
+    <p class="w-100 mb-3">
+        Cuando el signal al que hace referencia el computed tiene un cambio, el
+        computed ya sabe ese cambio. No tenemos que preocuparnose de actualizar
+        funcionamiento, rellamar metodos o otras logicas.
+    </p>
+  </div>
 
-    <!-- Apartado 5 -->
-    <h3 class="w-100 mt-3">Effect</h3>
-    <p class="w-100">Los signals son útiles porque notifican a los consumidores interesados cuando cambian. Un effect es una operación que se ejecuta cada vez que uno o más signals cambian.</p>
+
+  <!-- Ejercicio 1 -->
+  <div fadeInOutAnimation>
+    <h3 class="w-100">Ejercicio</h3>
+    <p class="w-100">
+      Acceder al archivo de <b>signals.component.ts</b> y crear un contador que
+      sume, reste y muestre el valor duplicado usando signals y computeds
+    </p>
+    <div class="ejercicio">
+      <p>
+        Sustituye este apartado con los outputs de lo que hagas en el ejercicio.
+      </p>
+      <p>['nombre variable: ' + this.vuestravariable]</p>
+      <p>['variable duplicada: ' + this.vuestravariable]</p>
+      <p>[botones de incremento, resta]</p>
+    </div>
+    <solucion-signals></solucion-signals>
+  </div>
+  
+
+  <!-- Apartado 5 -->
+  <div fadeInOutAnimation>
+    <h3 class="w-100 mt-5">Effect</h3>
+    <p class="w-100">
+      Los signals son útiles porque notifican a los consumidores interesados
+      cuando cambian. Un effect es una operación que se ejecuta cada vez que uno o
+      más signals cambian.
+    </p>
     <p class="w-100 bold">Se declaran asi:</p>
     <pre><code class="language-typescript">{{ 'effect(() => {  
-        console.log(`El contador es: ${this.contador()}`);  
-    });' }}</code></pre>
-    <p class="w-100">Los effect no suelen utilizarse comunmente, su funcion es mas para:</p>
-    <ul style="list-style: disc;">
-        <li>Como herramienta para debugar.</li>
-        <li>Mantener los datos sincronizados con el <b>localStorage</b></li>
+      console.log(`El contador es: ${this.contador()}`);  
+  });' }}</code></pre>
+    <p class="w-100">
+      Los effect no suelen utilizarse comunmente, su funcion es mas para:
+    </p>
+    <ul style="list-style: disc">
+      <li>Como herramienta para debugar.</li>
+      <li>Mantener los datos sincronizados con el <b>localStorage</b></li>
     </ul>
     <p class="w-100 bold">¿Por qué no se suelen utilizar?</p>
-    <p class="w-100">No suele utilizarse porque puede tener errores de datos, memory leaks y otros problemas de rendimiento.</p>
+    <p class="w-100">
+      No suele utilizarse porque puede tener errores de datos, memory leaks y
+      otros problemas de rendimiento.
+    </p>
+  </div>
+ 
 </div>
