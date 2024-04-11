@@ -1,5 +1,5 @@
 import { Component, inject, signal } from '@angular/core';
-import { NavbarComponent } from '../../../shared/navbar/navbar.component';
+import { NavbarComponent } from '../../../shared/components/navbar/navbar.component';
 import { ApiService } from '../../../services/api.service';
 import {
   AsyncPipe,

@@ -1,5 +1,5 @@
-import { Component, inject, signal } from '@angular/core';
-import { NavbarComponent } from '../../../shared/navbar/navbar.component';
+import { Component, signal } from '@angular/core';
+import { NavbarComponent } from '../../../shared/components/navbar/navbar.component';
 
 @Component({
   selector: 'app-libreria',
