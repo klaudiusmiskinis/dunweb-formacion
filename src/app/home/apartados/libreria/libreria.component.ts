@@ -1,5 +1,4 @@
 import { Component, inject, signal } from '@angular/core';
-import { RedirectService } from '../../../services/redirect.service';
 import { NavbarComponent } from '../../../shared/navbar/navbar.component';
 
 @Component({
@@ -10,10 +9,5 @@ import { NavbarComponent } from '../../../shared/navbar/navbar.component';
   imports: [NavbarComponent],
 })
 export class LibreriaComponent {
-  private redirectService = inject(RedirectService);
   title = signal('Libreria');
-
-  goTo(path: string): void {
-    this.redirectService.goTo(path);
-  }
 }

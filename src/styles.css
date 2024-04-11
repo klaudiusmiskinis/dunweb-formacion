@@ -89,4 +89,6 @@ button[disabled]:hover {
   color: inherit;
 }
 
-@import './grids.css'
+@import './grids.css';
+@import "~prismjs/plugins/toolbar/prism-toolbar.css";
+@import "~prismjs/themes/prism-okaidia";
