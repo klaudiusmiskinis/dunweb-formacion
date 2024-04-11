@@ -91,4 +91,4 @@ button[disabled]:hover {
 
 @import './grids.css';
 @import "~prismjs/plugins/toolbar/prism-toolbar.css";
-@import "~prismjs/themes/prism-okaidia";
+@import "~prismjs/themes/prism-tomorrow.min.css";

@@ -52,9 +52,9 @@
     <h3 class="w-100 mt-3">Effect</h3>
     <p class="w-100">Los signals son útiles porque notifican a los consumidores interesados cuando cambian. Un effect es una operación que se ejecuta cada vez que uno o más signals cambian.</p>
     <p class="w-100 bold">Se declaran asi:</p>
-    <code class="language-typescript">{{ 'effect(() => { 
-    console.log(`El contador es: ${this.contador()}`); 
-});' }}</code>
+    <pre><code class="language-typescript">{{ 'effect(() => {  
+        console.log(`El contador es: ${this.contador()}`);  
+    });' }}</code></pre>
     <p class="w-100">Los effect no suelen utilizarse comunmente, su funcion es mas para:</p>
     <ul style="list-style: disc;">
         <li>Como herramienta para debugar.</li>
