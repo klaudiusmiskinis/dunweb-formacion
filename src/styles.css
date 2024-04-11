@@ -63,6 +63,10 @@ pre.typescript {
   margin-top: 50px;
 }
 
+.mt-5 {
+  margin-top: 80px;
+}
+
 hr {
   border: 0.2px solid grey;
 }
