@@ -93,6 +93,16 @@ button[disabled]:hover {
   color: inherit;
 }
 
+.fade-effect {
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0; /* Inicialmente oculto */
+}
+
+.visible {
+  opacity: 1; /* Completamente visible */
+}
+
+
 @import './grids.css';
 @import "~prismjs/plugins/toolbar/prism-toolbar.css";
 @import "~prismjs/themes/prism-tomorrow.min.css";
