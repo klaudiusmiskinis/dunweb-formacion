@@ -60,3 +60,33 @@ h4 {
   color: #ffffff;
   margin: 0;
 }
+
+.gap-2 {
+  gap: 5px 5px;
+}
+
+.img-button {
+  width: 10px;
+  height: 10px;
+  margin-right: 2px;
+  transition: all 0.3s ease-in-out;
+}
+
+.img-button:hover {
+  transform: scale(5);
+}
+
+@keyframes rainbow-animation {
+  0% { background-color: red; }
+  14% { background-color: orange; }
+  28% { background-color: yellow; }
+  42% { background-color: green; }
+  57% { background-color: blue; }
+  71% { background-color: indigo; }
+  85% { background-color: violet; }
+  100% { background-color: red; }
+}
+
+::ng-deep minsait-button.rainbow button {
+  animation: rainbow-animation 8s linear infinite;
+}

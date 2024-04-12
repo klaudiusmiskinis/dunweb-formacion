@@ -42,36 +42,123 @@
       Las directivas son modificaciones directas a un elemento HTML para
       cambiarle el aspecto, un funcionamiento o declararlo como una plantilla.
       Por ejemplo, que maneje los eventos de entrar y salir sobre un botón
-      simplemente añadiendo una directiva.<br> Revisar para ver un ejemplo <b>fade-in-out-animation.directive.ts</b> o propio <b>dunweb</b>
+      simplemente añadiendo una directiva.<br />
+      Revisar para ver un ejemplo <b>fade-in-out-animation.directive.ts</b> o
+      propio <b>dunweb</b>
     </span>
   </div>
 
   <h4 class="mt-3">Todos los componentes</h4>
-    <div class="chips-container">
-        <span *ngFor="let chip of chips()" class="chip">{{chip}}</span>
+  <div class="chips-container">
+    <span *ngFor="let chip of chips()" class="chip">{{ chip }}</span>
+  </div>
+
+  <h3 class="mt-3">Samples de componentes</h3>
+  <minsait-panel
+    class="bg-white text-dark"
+    [title]="'minsait-datalist y minsait-option'"
+    [isOpen]="false"
+  >
+    <form [formGroup]="form">
+      <minsait-field [label]="'datalist 1'">
+        <minsait-datalist
+          formControlName="prueba"
+          (selected)="optionSeleccionada($event)"
+        >
+          <minsait-option *ngFor="let chip of chips()" [value]="chip">
+            {{ chip }}
+          </minsait-option>
+        </minsait-datalist>
+      </minsait-field>
+
+      <minsait-field [label]="'datalist 2'">
+        <minsait-datalist
+          formControlName="pruebaDos"
+          (selected)="optionSeleccionada($event)"
+        >
+          <minsait-option *ngFor="let chip of chips()" [value]="chip">
+            {{ chip }}
+          </minsait-option>
+        </minsait-datalist>
+      </minsait-field>
+    </form>
+    <p class="hglg-out">{{ "Se ha seleccionado: " + option() }}</p>
+  </minsait-panel>
+
+  <minsait-panel
+    class="bg-white text-dark"
+    [title]="'minsait-button'"
+    [isOpen]="false"
+  >
+    <div class="flex gap-2">
+      <minsait-button [type]="'submit'" [disabled]="false">
+        Haz click!
+      </minsait-button>
+
+      <minsait-button [type]="'submit'" [disabled]="false">
+        Habilitado
+      </minsait-button>
+
+      <minsait-button [type]="'submit'" [disabled]="true">
+        Estoy deshabilitado
+      </minsait-button>
+
+      <minsait-button>
+        <img
+          class="img-button"
+          src="https://as2.ftcdn.net/v2/jpg/00/72/75/79/1000_F_72757953_CzkNyWKDinutYVOop5mYHyRSarV55ZM8.jpg"
+          alt="Snow"
+        />Con una imagen
+      </minsait-button>
+
+      <minsait-button class="rainbow">Propio estilo</minsait-button>
     </div>
+  </minsait-panel>
 
-    <h3 class="mt-3">Samples de componentes</h3>
-    <minsait-panel class="bg-white text-dark" [title]="'minsait-datalist y minsait-option'" [isOpen]='false'>
-        <form [formGroup]="form">
-            <minsait-field [label]="'datalist 1'">
-                <minsait-datalist formControlName="prueba" (selected)="optionSeleccionada($event)">
-                    <minsait-option *ngFor="let chip of chips()" [value]="chip">
-                        {{chip}}
-                    </minsait-option>
-                </minsait-datalist>
-            </minsait-field>
-    
-            <minsait-field [label]="'datalist 2'">
-                <minsait-datalist formControlName="pruebaDos" (selected)="optionSeleccionada($event)">
-                    <minsait-option *ngFor="let chip of chips()" [value]="chip">
-                        {{chip}}
-                    </minsait-option>
-                </minsait-datalist>
-            </minsait-field>
-        </form>
+  <minsait-panel
+    class="bg-white text-dark"
+    [title]="'minsait-datapicker'"
+    [isOpen]="false"
+  >
+    <minsait-field>
+      <minsait-datepicker></minsait-datepicker>
+    </minsait-field>
+  </minsait-panel>
 
-        <p class="hglg-out">{{ 'Se ha seleccionado: ' + option()}}</p>
-     
+  <minsait-panel
+    class="bg-white text-dark"
+    [title]="'minsait-panel'"
+    [isOpen]="false"
+  >
+    <minsait-panel [isOpen]="true" [title]="'panel hijo 1'">
+      <p>Lorem ipsum dolor sit amet.</p>
+      <minsait-panel [isOpen]="true" [title]="'panel nieto 2'">
+        <p>Lorem ipsum dolor sit amet.</p>
+      </minsait-panel>
     </minsait-panel>
+
+    <minsait-panel [isOpen]="true" [title]="'panel hijo 1'">
+      <p>Lorem ipsum dolor sit amet.</p>
+      <minsait-panel [isOpen]="true" [title]="'panel nieto 2'">
+        <p>Lorem ipsum dolor sit amet.</p>
+        <minsait-panel [isOpen]="true" [title]="'panel bis nieto 3'">
+          <p>Lorem ipsum dolor sit amet.</p>
+        </minsait-panel>
+      </minsait-panel>
+    </minsait-panel>
+  </minsait-panel>
+
+  <minsait-panel
+    class="bg-white text-dark"
+    [title]="'minsait-file'"
+    [isOpen]="false"
+  >
+    <minsait-field [label]="'mete tu archivo y subelo!'">
+      <minsait-file></minsait-file>
+    </minsait-field>
+
+    <minsait-field [label]="'Se puede capar para que solo acepte imagenes 😊'">
+      <minsait-file [accept]="'.jpg'"></minsait-file>
+    </minsait-field>
+  </minsait-panel>
 </div>
