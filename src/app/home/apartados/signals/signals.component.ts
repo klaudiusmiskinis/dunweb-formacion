@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { AfterViewChecked, Component, inject } from '@angular/core';
 import { NavbarComponent } from '../../../shared/components/navbar/navbar.component';
 import { SolucionUnoComponent } from './solucion/solucion-uno.component';
+import { HighlightService } from 'src/app/services/highlight.service';
 import { FadeInOutAnimationDirective } from 'src/app/shared/directives/fade-in-out-animation.directive';
 
 @Component({
@@ -10,6 +11,10 @@ import { FadeInOutAnimationDirective } from 'src/app/shared/directives/fade-in-o
   standalone: true,
   imports: [NavbarComponent, SolucionUnoComponent, FadeInOutAnimationDirective],
 })
-export class SignalsComponent {
+export class SignalsComponent implements AfterViewChecked {
+  private hg = inject(HighlightService);
   
+  ngAfterViewChecked() {
+    this.hg.highlightAll();
+  }
 }
