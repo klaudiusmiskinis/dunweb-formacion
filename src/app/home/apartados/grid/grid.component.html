@@ -1,11 +1,11 @@
 <app-navbar [title]="'Grids'">
 </app-navbar>
 
-<div fadeInOutAnimation class="container">
+<div class="container">
   <h3 class="w-100">Grids - MnTable</h3>
   <p class="w-100">El componente <span class="hglg">mn-table</span> es el que nos permite crear las tablas.</p>
   <p class="w-100 bold">Estas son las caracteristicas:</p>
-  <ul>
+  <ul fadeInOutAnimation>
     <li>Renderizado de Tablas con Paginación: Capacidad para mostrar datos en una tabla soportando paginación.</li>
     <li>Soporte para Selección de Filas: Permite la selección de filas individualmente o la selección múltiple.</li>
     <li>Columnas Redimensionables y Arrastrables: Posibilidad de ajustar el ancho de las columnas y reordenarlas
@@ -19,7 +19,7 @@
   </ul>
 
   <h3>Propiedades (Inputs)</h3>
-  <ul>
+  <ul fadeInOutAnimation>
     <li><span class="hglg">data</span>: Array de datos a mostrar en la tabla.</li>
     <li><span class="hglg">cols</span>: Definiciones de las columnas, incluyendo el nombre, visibilidad, y si son
       ordenables.</li>
@@ -34,7 +34,7 @@
   </ul>
 
   <h3>Eventos (Outputs)</h3>
-  <ul>
+  <ul fadeInOutAnimation>
     <li><span class="hglg">eventSorteable</span>: Se emite al ordenar los datos en la tabla.</li>
     <li><span class="hglg">eventFilter</span>: Se emite al aplicar un filtro sobre los datos.</li>
     <li><span class="hglg">eventPagination</span>: Se emite al cambiar la paginación.</li>
@@ -45,7 +45,7 @@
   </ul>
 
   <h3>Funcionalidades Adicionales</h3>
-  <ul>
+  <ul fadeInOutAnimation>
     <li><span class="bold">Gestión de Cambios de Ancho y Orden de Columnas</span>: funciones para manejar el cambio de
       ancho y el reordenamiento de columnas.</li>
     <li><span class="bold">Soporte para la Selección de Filas</span>: métodos para seleccionar y deseleccionar filas,
@@ -57,7 +57,7 @@
   </ul>
 
   <h3>Ejemplos</h3>
-  <minsait-panel [title]="'Grid 1 - La grid más básica y más completa'" class="bg-white text-dark">
+  <minsait-panel fadeInOutAnimation [title]="'Grid 1 - La grid más básica y más completa'" class="bg-white text-dark">
     <mn-table [data]="datos()" [cols]="columnas()" [pagination]="configuracionPaginacion" [enableRowSelection]="true"
       [multiSelect]="true" [dragableColumn]="true" [resizable]="true" [emptyMessageText]="'No hay datos disponibles'"
       (eventSorteable)="onSort($event)" (eventSelectItem)="onSelectItem($event)"
@@ -66,7 +66,7 @@
     <p *ngIf="outputGridUno()" class="w-100 hglg-out small"> {{outputGridUno()}} </p>
   </minsait-panel>
 
-  <minsait-panel [title]="'Grid 2 - Edición de celda'" class="bg-white text-dark">
+  <minsait-panel fadeInOutAnimation [title]="'Grid 2 - Edición de celda'" class="bg-white text-dark">
     <mn-table [data]="datos()" [cols]="columnasDos()" [enableRowSelection]="false"
       [pagination]="configuracionPaginacion">
       <ng-template [mnTableRow]="datos()" let-data let-cols="cols">

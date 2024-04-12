@@ -110,6 +110,21 @@ button[disabled]:hover {
   color: rgb(17, 17, 17);
 }
 
+.hglg {
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+.hglg:hover {
+  background-color: #006aff;
+  box-shadow: 0 0 5px #006aff;
+  padding-left: 5px;
+  color: #111111;
+}
+
+
+
 
 @import './grids.css';
 @import "~prismjs/plugins/toolbar/prism-toolbar.css";

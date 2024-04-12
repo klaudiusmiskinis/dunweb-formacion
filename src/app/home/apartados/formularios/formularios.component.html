@@ -1,1 +1,35 @@
 <app-navbar [title]="'Formularios'"> </app-navbar>
+
+<div class="container">
+    <h2>Formularios</h2>
+
+    <p>Los formularios en angular son una caracteristica basica de todas paginas web para poder mostrar, pedir o manejar
+        datos.</p>
+    <p>Angular nos ofrece dos tipos de formularios:</p>
+    <div class="flex">
+        <ul style="list-style: disc inside; margin-top: 0;">
+            <li class="hglg">Formularios por plantilla</li>
+            <li class="hglg">Formularios Reactivos</li>
+        </ul>
+    </div>
+
+    <div>
+        <p>Los <b>formularios basados en plantillas</b> son mucho más simple pero no proporciona ni observables, validadores ni
+            toda la configuración que nos proporcionan los formularios reactivos. Aqui tenemos un ejemplo:</p>
+        <pre><code class="language-typescript">{{example1}}</code></pre>
+        <pre><code class="language-markup">{{example2}}</code></pre>
+    </div>
+
+    <p>Por otro lado, los <b>formularios reactivos</b> dan un control más preciso y flexible sobre el formulario, y son los que
+        mas se utilizan normalmente en Angular. Aqui tenemos un ejemplo básico.</p>
+
+    <pre><code class="language-typescript">{{example3}}</code></pre>
+    <p>La lógica es sencilla, creamos la estructura de nuestro formulario y lo declaramos con las opciones que necesitemos. En este caso que los campos sean requeridos, que el campo de nombre minimo tenga cuatro caracteres y el campo de email que tenga un validador para verificar que se escribe un email.</p>
+    <pre><code class="language-markup">{{example4}}</code></pre>
+    <p>Y aqui viene la parte de la reactividad, la reactividad es una manera de generalizar eventos y poder crear funcionamiento automaticos para distintos casos.</p>
+    <pre><code class="language-typescript">{{example5}}</code></pre>
+
+    <p>
+        Bien pues en relacion con los formularios, nos vamos a una parte de nuestra libreria de componentes <b>(minsait-ui-comp-lib)</b> del front, con la cual podemos usar componentes enfocados a una funcion y asi tener un trabajo estandarizado y estructurado.
+    </p>
+</div>

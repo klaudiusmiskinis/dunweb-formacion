@@ -111,25 +111,25 @@ export class GridComponent {
   /* Grid 1 */
   onSelectItem(evento: any): void {
     if (evento.accion == 'select')
-      this.outputGridUno.set('Se ha seleccionado el ítem ' + evento.item.id);
+      this.outputGridUno.set('Se ha seleccionado el item ' + evento.item.id);
     if (evento.accion == 'unselect')
-      this.outputGridUno.set('Se ha deseleccionado el ítem ' + evento.item.id);
+      this.outputGridUno.set('Se ha deseleccionado el item ' + evento.item.id);
   }
 
   /* Grid 1 */
   onPaginationChange(evento: any): void {
     if (evento.accion == 'nextPage')
-      this.outputGridUno.set('Se han saltado a la página siguiente');
+      this.outputGridUno.set('Se ha saltado a la página siguiente');
     if (evento.accion == 'prevPage')
-      this.outputGridUno.set('Se han vuelto a la página anterior');
+      this.outputGridUno.set('Se ha vuelto a la página anterior');
   }
 
   /* Grid 1 */
   onSelectAll(evento: any): void {
     if (evento.accion == 'select')
-      this.outputGridUno.set('Se han seleccionado todos los ítems');
+      this.outputGridUno.set('Se han seleccionado todos los items');
     if (evento.accion == 'unselect')
-      this.outputGridUno.set('Se han deseleccionado todos los ítems');
+      this.outputGridUno.set('Se han deseleccionado todos los items');
   }
 
   /* Grid 2 */
