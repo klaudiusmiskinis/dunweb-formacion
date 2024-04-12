@@ -102,6 +102,14 @@ button[disabled]:hover {
   opacity: 1; /* Completamente visible */
 }
 
+.bg-white {
+  background-color: white;
+}
+
+.text-dark {
+  color: rgb(17, 17, 17);
+}
+
 
 @import './grids.css';
 @import "~prismjs/plugins/toolbar/prism-toolbar.css";

@@ -1,11 +1,3 @@
-.bg-white {
-  background-color: white;
-}
-
-.text-dark {
-  color: rgb(17, 17, 17);
-}
-
 .estado-activo {
   color: green; /* Color para estado activo */
   font-weight: bold;
@@ -31,6 +23,7 @@
 }
 
 .hglg:hover {
+  border-radius: 5px;
   background-color: #006aff;
   box-shadow: 0 0 5px #006aff;
   color: #111111;

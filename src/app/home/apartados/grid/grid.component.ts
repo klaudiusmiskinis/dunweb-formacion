@@ -11,6 +11,7 @@ import {
   NgSwitchDefault,
 } from '@angular/common';
 import { MinsaitModule } from '../../../shared/modules/minsait.module';
+import { FadeInOutAnimationDirective } from 'src/app/shared/directives/fade-in-out-animation.directive';
 
 @Component({
   selector: 'app-grid',
@@ -27,6 +28,7 @@ import { MinsaitModule } from '../../../shared/modules/minsait.module';
     NgSwitchDefault,
     NgSwitchCase,
     NgSwitch,
+    FadeInOutAnimationDirective
   ],
 })
 export class GridComponent {

@@ -1,18 +1,77 @@
-<app-navbar 
-    [title]="'Librería'" >
-</app-navbar>
+<app-navbar [title]="'Librería'"> </app-navbar>
 
-<div class="container">
-    <h2 class="w-100">Libreria</h2>
-    <p class="w-100">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, nihil. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere rerum perferendis ipsa doloremque inventore est adipisci dignissimos aspernatur quia dolorum!</p>
-    
-    <div class="flex">
-        <ul style="list-style: disc;">
-            <li>Lorem, ipsum dolor.</li>
-            <li>Expedita, impedit quibusdam?</li>
-            <li>Iste, saepe exercitationem.</li>
-          </ul>
+<div fadeInOutAnimation class="container">
+  <h2 class="w-100">Librería</h2>
+  <p class="w-100">
+    Nuestra querida libreria de componentes, con la cual podemos usar
+    componentes enfocados a una funcion y asi tener un trabajo estandarizado y
+    estructurado.
+  </p>
+  <div class="flex">
+    <div class="column">
+      <h4>Relacionados con formularios</h4>
+      <ul style="list-style: disc inside">
+        <li class="hglg">minsait-field</li>
+        <li class="hglg">minsait-field-error</li>
+        <li class="hglg">minsait-checkbox</li>
+        <li class="hglg">minsait-checkbox-group</li>
+        <li class="hglg">minsait-radio</li>
+        <li class="hglg">minsait-radio-group</li>
+        <li class="hglg">minsait-datalist</li>
+        <li class="hglg">minsait-option</li>
+        <li class="hglg">minsait-datepicker</li>
+        <li class="hglg">minsait-file</li>
+      </ul>
     </div>
-  
-</div>
+    <div class="column">
+      <h4 class="text-center">Adicionales</h4>
+      <ul style="list-style: disc inside">
+        <li class="hglg">mn-table</li>
+        <li class="hglg">minsait-panel</li>
+        <li class="hglg">minsait-messages</li>
+        <li class="hglg">minsait-notification</li>
+        <li class="hglg">ms-input (directiva)</li>
+        <li class="hglg">ms-textarea (directiva)</li>
+        <li class="hglg">ms-select (directiva)</li>
+      </ul>
+    </div>
+  </div>
 
+  <div class="info">
+    <span>
+      Las directivas son modificaciones directas a un elemento HTML para
+      cambiarle el aspecto, un funcionamiento o declararlo como una plantilla.
+      Por ejemplo, que maneje los eventos de entrar y salir sobre un botón
+      simplemente añadiendo una directiva.<br> Revisar para ver un ejemplo <b>fade-in-out-animation.directive.ts</b> o propio <b>dunweb</b>
+    </span>
+  </div>
+
+  <h4 class="mt-3">Todos los componentes</h4>
+    <div class="chips-container">
+        <span *ngFor="let chip of chips()" class="chip">{{chip}}</span>
+    </div>
+
+    <h3 class="mt-3">Samples de componentes</h3>
+    <minsait-panel class="bg-white text-dark" [title]="'minsait-datalist y minsait-option'" [isOpen]='false'>
+        <form [formGroup]="form">
+            <minsait-field [label]="'datalist 1'">
+                <minsait-datalist formControlName="prueba" (selected)="optionSeleccionada($event)">
+                    <minsait-option *ngFor="let chip of chips()" [value]="chip">
+                        {{chip}}
+                    </minsait-option>
+                </minsait-datalist>
+            </minsait-field>
+    
+            <minsait-field [label]="'datalist 2'">
+                <minsait-datalist formControlName="pruebaDos" (selected)="optionSeleccionada($event)">
+                    <minsait-option *ngFor="let chip of chips()" [value]="chip">
+                        {{chip}}
+                    </minsait-option>
+                </minsait-datalist>
+            </minsait-field>
+        </form>
+
+        <p class="hglg-out">{{ 'Se ha seleccionado: ' + option()}}</p>
+     
+    </minsait-panel>
+</div>
