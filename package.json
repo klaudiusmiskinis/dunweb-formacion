@@ -24,7 +24,8 @@
     "prismjs": "^1.29.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.6.2",
-    "zone.js": "~0.14.2"
+    "zone.js": "~0.14.2",
+    "minsait-ui-comp-lib": "2.0.37"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^17.0.0",
