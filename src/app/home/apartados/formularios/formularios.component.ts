@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavbarComponent } from 'src/app/shared/components/navbar/navbar.component';
 import { FadeInOutAnimationDirective } from 'src/app/shared/directives/fade-in-out-animation.directive';
+import { HighlightService } from 'src/app/services/highlight.service';
 
 @Component({
   selector: 'app-formularios',
@@ -11,6 +12,12 @@ import { FadeInOutAnimationDirective } from 'src/app/shared/directives/fade-in-o
   styleUrl: './formularios.component.css'
 })
 export class FormulariosComponent {
+  private hg = inject(HighlightService);
+  
+  ngAfterViewChecked() {
+    this.hg.highlightAll();
+  }
+
   example2 = `<form (ngSubmit)="onSubmit()">
   <input [(ngModel)]="usuario.nombre" name="nombre" type="text" placeholder="Nombre">
   <input [(ngModel)]="usuario.email" name="email" type="email" placeholder="Email">
