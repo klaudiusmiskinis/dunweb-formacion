@@ -1,6 +1,5 @@
-import { Component, inject, signal } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { NavbarComponent } from '../../../shared/components/navbar/navbar.component';
-import { ApiService } from '../../../services/api.service';
 import {
   AsyncPipe,
   JsonPipe,
@@ -32,15 +31,9 @@ import { FadeInOutAnimationDirective } from 'src/app/shared/directives/fade-in-o
   ],
 })
 export class GridComponent {
-  private api = inject(ApiService);
-
-  employee$ = this.api.getEmployees();
-
+  outputGridUno = signal<any>('');
   datos = signal<any>([]);
   columnas = signal<any>([]);
-  columnasDos = signal<any>([]);
-  editState: { row: number; col: string; originalValue: any } | null = null;
-  outputGridUno = signal<any>('');
   configuracionPaginacion = {
     pageSize: 10,
     totalPages: 1,
@@ -102,6 +95,7 @@ export class GridComponent {
       this.datos().push(element);
     }
   }
+
   /* Grid 1 */
   onSort(evento: any): void {
     if (evento.dir == 'asc')
@@ -113,6 +107,7 @@ export class GridComponent {
         'Se ha ordenado descendentemente la columna ' + evento.name,
       );
   }
+
   /* Grid 1 */
   onSelectItem(evento: any): void {
     if (evento.accion == 'select')
@@ -120,6 +115,7 @@ export class GridComponent {
     if (evento.accion == 'unselect')
       this.outputGridUno.set('Se ha deseleccionado el ítem ' + evento.item.id);
   }
+
   /* Grid 1 */
   onPaginationChange(evento: any): void {
     if (evento.accion == 'nextPage')
@@ -127,6 +123,7 @@ export class GridComponent {
     if (evento.accion == 'prevPage')
       this.outputGridUno.set('Se han vuelto a la página anterior');
   }
+
   /* Grid 1 */
   onSelectAll(evento: any): void {
     if (evento.accion == 'select')
@@ -136,10 +133,13 @@ export class GridComponent {
   }
 
   /* Grid 2 */
+  columnasDos = signal<any>([]);
   editingCells = new Map<string, boolean>();
+  editState: { row: number; col: string; originalValue: any } | null = null;
+
   /* Grid 2 */
   toggleEdit(rowIdx: number, colName: string) {
-    this.editingCells.forEach((_, key) => this.editingCells.set(key, false)); // Cancel editing on all cells
+    this.editingCells.forEach((_, key) => this.editingCells.set(key, false));
     const key = `${rowIdx}-${colName}`;
     this.editingCells.set(key, true);
   }

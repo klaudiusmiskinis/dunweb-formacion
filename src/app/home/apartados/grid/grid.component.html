@@ -1,103 +1,103 @@
-<app-navbar 
-    [title]="'Grids'">
+<app-navbar [title]="'Grids'">
 </app-navbar>
 
 <div fadeInOutAnimation class="container">
-    <h3 class="w-100">Grids - MnTable</h3>
-    <p class="w-100">El componente <span class="hglg">mn-table</span> es el que nos permite crear las tablas.</p>
-    <p class="w-100 bold">Estas son las caracteristicas:</p>
-    <ul>
-        <li>Renderizado de Tablas con Paginación: Capacidad para mostrar datos en una tabla soportando paginación.</li>
-        <li>Soporte para Selección de Filas: Permite la selección de filas individualmente o la selección múltiple.</li>
-        <li>Columnas Redimensionables y Arrastrables: Posibilidad de ajustar el ancho de las columnas y reordenarlas mediante arrastre.</li>
-        <li>Personalización a través de Templates: Soporta el uso de templates personalizados para los encabezados y las celdas de la tabla.</li>
-        <li>Integración con Servicios Externos: Puede integrarse con servicios externos para funcionalidades como exportación, filtrado, y ordenación.</li>
-        <li>Configurable y Extensible: Acepta una amplia gama de configuraciones para adaptarse a diferentes necesidades, incluyendo estilos de visualización, habilitación de controles específicos, y comportamientos personalizados.</li>
-    </ul>
+  <h3 class="w-100">Grids - MnTable</h3>
+  <p class="w-100">El componente <span class="hglg">mn-table</span> es el que nos permite crear las tablas.</p>
+  <p class="w-100 bold">Estas son las caracteristicas:</p>
+  <ul>
+    <li>Renderizado de Tablas con Paginación: Capacidad para mostrar datos en una tabla soportando paginación.</li>
+    <li>Soporte para Selección de Filas: Permite la selección de filas individualmente o la selección múltiple.</li>
+    <li>Columnas Redimensionables y Arrastrables: Posibilidad de ajustar el ancho de las columnas y reordenarlas
+      mediante arrastre.</li>
+    <li>Personalización a través de Templates: Soporta el uso de templates personalizados para los encabezados y las
+      celdas de la tabla.</li>
+    <li>Integración con Servicios Externos: Puede integrarse con servicios externos para funcionalidades como
+      exportación, filtrado, y ordenación.</li>
+    <li>Configurable y Extensible: Acepta una amplia gama de configuraciones para adaptarse a diferentes necesidades,
+      incluyendo estilos de visualización, habilitación de controles específicos, y comportamientos personalizados.</li>
+  </ul>
 
-    <h3>Propiedades (Inputs)</h3>
-    <ul>
-        <li><span class="hglg">data</span>: Array de datos a mostrar en la tabla.</li>
-        <li><span class="hglg">cols</span>: Definiciones de las columnas, incluyendo el nombre, visibilidad, y si son ordenables.</li>
-        <li><span class="hglg">pagination</span>: Configuración para la paginación de la tabla.</li>
-        <li><span class="hglg">enableRowSelection</span>: Habilita la selección de filas.</li>
-        <li><span class="hglg">multiSelect</span>: Permite la selección múltiple de filas.</li>
-        <li><span class="hglg">dragableColumn</span>: Permite reordenar las columnas mediante arrastre.</li>
-        <li><span class="hglg">resizable</span>: Habilita la redimensión de las columnas.</li>
-        <li><span class="hglg">emptyMessageText</span>: Mensaje a mostrar cuando no hay datos disponibles.</li>
-        <li>Además de otras propiedades para personalización detallada, como fullHeight, hideSelectAll, hidePagination, entre otras.</li>
-    </ul>
+  <h3>Propiedades (Inputs)</h3>
+  <ul>
+    <li><span class="hglg">data</span>: Array de datos a mostrar en la tabla.</li>
+    <li><span class="hglg">cols</span>: Definiciones de las columnas, incluyendo el nombre, visibilidad, y si son
+      ordenables.</li>
+    <li><span class="hglg">pagination</span>: Configuración para la paginación de la tabla.</li>
+    <li><span class="hglg">enableRowSelection</span>: Habilita la selección de filas.</li>
+    <li><span class="hglg">multiSelect</span>: Permite la selección múltiple de filas.</li>
+    <li><span class="hglg">dragableColumn</span>: Permite reordenar las columnas mediante arrastre.</li>
+    <li><span class="hglg">resizable</span>: Habilita la redimensión de las columnas.</li>
+    <li><span class="hglg">emptyMessageText</span>: Mensaje a mostrar cuando no hay datos disponibles.</li>
+    <li>Además de otras propiedades para personalización detallada, como fullHeight, hideSelectAll, hidePagination,
+      entre otras.</li>
+  </ul>
 
-    <h3>Eventos (Outputs)</h3>
-    <ul>
-        <li><span class="hglg">eventSorteable</span>: Se emite al ordenar los datos en la tabla.</li>
-        <li><span class="hglg">eventFilter</span>: Se emite al aplicar un filtro sobre los datos.</li>
-        <li><span class="hglg">eventPagination</span>: Se emite al cambiar la paginación.</li>
-        <li><span class="hglg">eventSelectItem</span>: Se emite al seleccionar una fila.</li>
-        <li><span class="hglg">eventSelectAll</span>: Se emite al seleccionar o deseleccionar todas las filas.</li>
-        <li><span class="hglg">eventDblClick</span>: Se emite al hacer doble clic en una fila.</li>
-        <li><span class="hglg">eventExporToExcel</span>: Se emite para exportar los datos de la tabla a Excel.</li>
-    </ul>
+  <h3>Eventos (Outputs)</h3>
+  <ul>
+    <li><span class="hglg">eventSorteable</span>: Se emite al ordenar los datos en la tabla.</li>
+    <li><span class="hglg">eventFilter</span>: Se emite al aplicar un filtro sobre los datos.</li>
+    <li><span class="hglg">eventPagination</span>: Se emite al cambiar la paginación.</li>
+    <li><span class="hglg">eventSelectItem</span>: Se emite al seleccionar una fila.</li>
+    <li><span class="hglg">eventSelectAll</span>: Se emite al seleccionar o deseleccionar todas las filas.</li>
+    <li><span class="hglg">eventDblClick</span>: Se emite al hacer doble clic en una fila.</li>
+    <li><span class="hglg">eventExporToExcel</span>: Se emite para exportar los datos de la tabla a Excel.</li>
+  </ul>
 
-    <h3>Funcionalidades Adicionales</h3>
-    <ul>
-        <li><span class="bold">Gestión de Cambios de Ancho y Orden de Columnas</span>: funciones para manejar el cambio de ancho y el reordenamiento de columnas.</li>
-        <li><span class="bold">Soporte para la Selección de Filas</span>: métodos para seleccionar y deseleccionar filas, tanto individualmente como en masa.</li>
-        <li><span class="bold">Exportación de Datos</span>: capacidad para exportar los datos de la tabla a diferentes formatos, como Excel.</li>
-        <li><span class="bold">Observación de Cambios</span>: utiliza ResizeObserver para reaccionar a cambios en el tamaño del contenedor de la tabla, ajustando el layout según sea necesario.</li>
-    </ul>
+  <h3>Funcionalidades Adicionales</h3>
+  <ul>
+    <li><span class="bold">Gestión de Cambios de Ancho y Orden de Columnas</span>: funciones para manejar el cambio de
+      ancho y el reordenamiento de columnas.</li>
+    <li><span class="bold">Soporte para la Selección de Filas</span>: métodos para seleccionar y deseleccionar filas,
+      tanto individualmente como en masa.</li>
+    <li><span class="bold">Exportación de Datos</span>: capacidad para exportar los datos de la tabla a diferentes
+      formatos, como Excel.</li>
+    <li><span class="bold">Observación de Cambios</span>: utiliza ResizeObserver para reaccionar a cambios en el tamaño
+      del contenedor de la tabla, ajustando el layout según sea necesario.</li>
+  </ul>
 
-    <h3>Ejemplos</h3>
-    <minsait-panel [title]="'Grid 1 - La grid más básica y más completa'" class="bg-white text-dark">
-        <mn-table
-        [data]="datos()"
-        [cols]="columnas()"
-        [pagination]="configuracionPaginacion"
-        [enableRowSelection]="true"
-        [multiSelect]="true"
-        [dragableColumn]="true"
-        [resizable]="true"
-        [emptyMessageText]="'No hay datos disponibles'"
-        (eventSorteable)="onSort($event)"
-        (eventSelectItem)="onSelectItem($event)"
-        (eventPagination)="onPaginationChange($event)"
-        (eventSelectAll)="onSelectAll($event)">
-        </mn-table>
-        <p *ngIf="outputGridUno()" class="w-100 hglg-out small"> {{outputGridUno()}} </p>
-    </minsait-panel>
-      
-    
-    <minsait-panel [title]="'Grid 2 - Edición de celda'" class="bg-white text-dark">
-        <mn-table [data]="datos()" [cols]="columnasDos()"
-        [enableRowSelection]="false" [pagination]="configuracionPaginacion">
-        <ng-template [mnTableRow]="datos()" let-data let-cols="cols">
-          <tr mn-table-col *ngFor="let row of data; let i = index" [index]="i">
-            <ng-container *ngFor="let col of cols">
-              <ng-container [ngSwitch]="col.name">
-                <td *ngSwitchCase="'id'" (click)="toggleEdit(i, col.name)">
-                  <div *ngIf="!isCellEditable(i, col.name); else editInput">
-                    {{ row[col.name] }}
-                  </div>
-                  <ng-template #editInput>
-                    <input (blur)="cancelEdit()" (keyup.enter)="saveChanges(i, col.name, $event)" value="{{ row[col.name] }}"/>
-                  </ng-template>
-                </td>
-                <td *ngSwitchCase="'nombre'" (click)="toggleEdit(i, col.name)">
-                  <div *ngIf="!isCellEditable(i, col.name); else editNameInput">
-                    {{ row[col.name] }}
-                  </div>
-                  <ng-template #editNameInput>
-                    <input (blur)="cancelEdit()" (keyup.enter)="saveChanges(i, col.name, $event)" value="{{ row[col.name] }}"/>
-                  </ng-template>
-                </td>
-                <td *ngSwitchDefault>
+  <h3>Ejemplos</h3>
+  <minsait-panel [title]="'Grid 1 - La grid más básica y más completa'" class="bg-white text-dark">
+    <mn-table [data]="datos()" [cols]="columnas()" [pagination]="configuracionPaginacion" [enableRowSelection]="true"
+      [multiSelect]="true" [dragableColumn]="true" [resizable]="true" [emptyMessageText]="'No hay datos disponibles'"
+      (eventSorteable)="onSort($event)" (eventSelectItem)="onSelectItem($event)"
+      (eventPagination)="onPaginationChange($event)" (eventSelectAll)="onSelectAll($event)">
+    </mn-table>
+    <p *ngIf="outputGridUno()" class="w-100 hglg-out small"> {{outputGridUno()}} </p>
+  </minsait-panel>
+
+  <minsait-panel [title]="'Grid 2 - Edición de celda'" class="bg-white text-dark">
+    <mn-table [data]="datos()" [cols]="columnasDos()" [enableRowSelection]="false"
+      [pagination]="configuracionPaginacion">
+      <ng-template [mnTableRow]="datos()" let-data let-cols="cols">
+        <tr mn-table-col *ngFor="let row of data; let i = index" [index]="i">
+          <ng-container *ngFor="let col of cols">
+            <ng-container [ngSwitch]="col.name">
+              <td *ngSwitchCase="'id'" (click)="toggleEdit(i, col.name)">
+                <div *ngIf="!isCellEditable(i, col.name); else editInput">
                   {{ row[col.name] }}
-                </td>
-              </ng-container>
+                </div>
+                <ng-template #editInput>
+                  <input (blur)="cancelEdit()" (keyup.enter)="saveChanges(i, col.name, $event)"
+                    value="{{ row[col.name] }}" />
+                </ng-template>
+              </td>
+              <td *ngSwitchCase="'nombre'" (click)="toggleEdit(i, col.name)">
+                <div *ngIf="!isCellEditable(i, col.name); else editNameInput">
+                  {{ row[col.name] }}
+                </div>
+                <ng-template #editNameInput>
+                  <input (blur)="cancelEdit()" (keyup.enter)="saveChanges(i, col.name, $event)"
+                    value="{{ row[col.name] }}" />
+                </ng-template>
+              </td>
+              <td *ngSwitchDefault>
+                {{ row[col.name] }}
+              </td>
             </ng-container>
-          </tr>
-        </ng-template>
-      </mn-table>
-    </minsait-panel>
-
+          </ng-container>
+        </tr>
+      </ng-template>
+    </mn-table>
+  </minsait-panel>
 </div>
